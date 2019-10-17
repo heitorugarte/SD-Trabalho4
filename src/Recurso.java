@@ -1,4 +1,3 @@
-
 public final class Recurso {
 
 	private static final Recurso INSTANCE = new Recurso();
@@ -11,6 +10,9 @@ public final class Recurso {
 
 	public void setProcessoDetentor(Processo processoDetentor) {
 		this.processoDetentor = processoDetentor;
+		if (processoDetentor != null)
+			System.out.println(
+					"\nRecurso: O novo detentor é o processo " + this.processoDetentor.getIdentificador() + "!");
 	}
 
 	public static Recurso getInstance() {
